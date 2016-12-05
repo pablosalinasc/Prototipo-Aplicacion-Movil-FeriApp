@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var FeriApp = angular.module('FeriApp', ['ionic']);
+var FeriApp = angular.module('FeriApp', ['ionic', 'ngCordova']);
 
 FeriApp.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -89,6 +89,20 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: "UserController"
                 }
             }
+        })
+        .state('app_usuario.mapa', {
+            url: '/mapa',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/mapa.html',
+                    controller: 'MapaController'
+                }
+            }
+        })
+        .state('mapa', {
+            url: '/mapa_solo',
+            templateUrl: 'vistas/mapa_solo.html',
+            controller: 'MapaController'
         });
     $urlRouterProvider.otherwise('/');
 });

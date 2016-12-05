@@ -3,9 +3,9 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var FeriApp = angular.module('FeriApp', ['ionic', 'IonicitudeModule']);
+var FeriApp = angular.module('FeriApp', ['ionic', 'ngCordova']);
 
-FeriApp.run(function ($ionicPlatform, Ionicitude) {
+FeriApp.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function() {
         if (cordova.platformId === "ios" && window.cordova && window.cordova.plugins.Keyboard) {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -20,20 +20,6 @@ FeriApp.run(function ($ionicPlatform, Ionicitude) {
         if(window.StatusBar) {
             StatusBar.styleDefault();
         }
-        Ionicitude.init()
-        .then(function () {
-          console.log('Here you go. Ionicitude is fully initialized !');
-          // Now that Ionicitude is initialized, we can safely add the Actions that could be called from within an AR View.
-          // Note that these actions will be executed by the Ionic WebView and in its context.
-          // To call this captureScreen action, there should be, in one of your AR World JS code and assuming that you're using Ionicitude's CHM, something like :
-          //  document.location = architectsdk://captureScreen
-          Ionicitude
-            .addAction(captureScreen)
-            .addAction(markerselected);
-        })
-        .catch(function (error) {
-            console.log("Hu-ho..! Something has failed !", error);
-        });
     })
 });
 
@@ -103,6 +89,20 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: "UserController"
                 }
             }
+        })
+        .state('app_usuario.mapa', {
+            url: '/mapa',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/mapa.html',
+                    controller: 'MapaController'
+                }
+            }
+        })
+        .state('mapa', {
+            url: '/mapa_solo',
+            templateUrl: 'vistas/mapa_solo.html',
+            controller: 'MapaController'
         });
     $urlRouterProvider.otherwise('/');
 });

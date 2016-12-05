@@ -131,10 +131,44 @@ FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope,
        { id_sesion: 3333, nombre_sesion: "Veronica Dominguez", correo_sesion: "veronica.dominguez@usach.cl", password_sesion: "1234", rol_sesion: "usuario" },
         { id_sesion: 4444, nombre_sesion: "Daniel Morales", correo_sesion: "sebastian.calderon@usach.cl", password_sesion: "1234", rol_sesion: "usuario" },
        { id_sesion: 5555, nombre_sesion: "Rodrigo Mendoza", correo_sesion: "rodrigo.mendoza@usach.cl", password_sesion: "1234", rol_sesion: "usuario" },
-        { id_sesion: 1234, nombre_sesion: "Cliente Uno", correo_sesion: "cliente1@usach.cl", password_sesion: "1234", rol_sesion: "cliente" },
-        { id_sesion: 2345, nombre_sesion: "Cliente Dos", correo_sesion: "cliente2@usach.cl", password_sesion: "1234", rol_sesion: "cliente" },
-        { id_sesion: 3456, nombre_sesion: "Cliente Tres", correo_sesion: "cliente3@usach.cl", password_sesion: "1234", rol_sesion: "cliente" }
+        { id_sesion: 6666, nombre_sesion: "Cliente Uno", correo_sesion: "cliente1@usach.cl", password_sesion: "1234", rol_sesion: "cliente" },
+        { id_sesion: 7777, nombre_sesion: "Cliente Dos", correo_sesion: "cliente2@usach.cl", password_sesion: "1234", rol_sesion: "cliente" },
+        { id_sesion: 8888, nombre_sesion: "Cliente Tres", correo_sesion: "cliente3@usach.cl", password_sesion: "1234", rol_sesion: "cliente" }
     ];
+    $rootScope.ferias = [
+        {id_feria: 1111, latitud_feria:-33.4906832 ,longitud_feria:-70.7667169 ,nombre_feria:"Modelo_3",comuna_feria:"Maipú"},
+        {id_feria: 2222, latitud_feria: -33.449877, longitud_feria: -70.687286, nombre_feria: "Feria Informática USACH", comuna_feria: "Estación Central"},
+        {id_feria: 3333, latitud_feria: -33.4703495, longitud_feria: -70.7481123, nombre_feria: "El descanso", comuna_feria: "Maipú"}
+    ];
+    $rootScope.locales=[
+        { id_local: 1234, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-1.jpg", latitud_local: -33.4903173, longitud_local: -70.7660641, descripcion_local: "Se vende Papas.", id_cliente_local: 1234, },
+        { id_local: 2345, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-2.jpg", latitud_local: -33.49022, longitud_local: -70.7660104, descripcion_local: "Se vende Frutas.", id_cliente_local: 2345, },
+        { id_local: 3456, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-3.jpg", latitud_local: -33.4904012, longitud_local: -70.7662022, descripcion_local: "Se vende frutos secos.", id_cliente_local: 3456, },
+        { id_local: 4567, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-4.jpg", latitud_local: -33.4906832, longitud_local: -70.7667169, descripcion_local: "Se vende Mote.", id_cliente_local: 2345, },
+        { id_local: 5678, id_feria_local: 2222, codigo_qr_local: "/img/qrferiausach-1.jpg", latitud_local: -33.449877, longitud_local: -70.687286, descripcion_local: "Stand del proyecto FeriApp, grupo del ramo de Proyecto de Ingeniería de Informática.", id_cliente_local: 2345 },
+        { id_local: 6789, id_feria_local: 3333, codigo_qr_local: "/img/qrdescanso-1.jpg", latitud_feria: -33.4703495, longitud_feria: -70.7481123, descripcion_local: "Se vende melones y sandias", id_cliente_local: 3456 }
+    ];
+    $rootScope.productos = [
+        {id_producto:1111,nombre_producto:"Acelga",tipo_producto:"Hortaliza"},
+        {id_producto:2222,nombre_producto:"Achicoria",tipo_producto:"Hortaliza"},
+        { id_producto: 2222, nombre_producto: "Ajo", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Ají", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Albahaca", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Alcachofa", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Apio", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Arveja Verde", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Berenjena", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Betarraga", tipo_producto: "Hortaliza" },
+        { id_producto: 2222, nombre_producto: "Brócoli", tipo_producto: "Hortaliza" }
+    ];
+    $rootScope.variedad = [
+        { id_producto: 1111, descripcion_producto: ""},
+        { id_producto: 1111, descripcion_producto: ""},
+        { id_producto: 1111, descripcion_producto: ""},
+        { id_producto: 1111, descripcion_producto: ""},
+        { id_producto: 1111,descripcion_producto: ""}
+    ];
+
 });
 
 FeriApp.controller('MenuController', function ($http, $scope, $state, $rootScope) {
