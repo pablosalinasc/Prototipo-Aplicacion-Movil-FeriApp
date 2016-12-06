@@ -98,11 +98,6 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'MapaController'
                 }
             }
-        })
-        .state('mapa', {
-            url: '/mapa_solo',
-            templateUrl: 'vistas/mapa_solo.html',
-            controller: 'MapaController'
         });
     $urlRouterProvider.otherwise('/');
 });

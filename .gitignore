@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Directorios
+prototipo/node_modules
+prototipo/platforms
+prototipo/plugins
+prototipo/resources
+prototipo/www/lib
