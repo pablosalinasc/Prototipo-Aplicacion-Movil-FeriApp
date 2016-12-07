@@ -6,13 +6,11 @@ FeriApp.controller('MapaController', function ($rootScope,$scope, $state, $cordo
     $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
         console.log("Funcionó el mapa");
         var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
         var mapOptions = {
             center: latLng,
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-
         $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
         google.maps.event.addListenerOnce($scope.map, 'idle', function() {
             var marcadorPosicion = new google.maps.Marker({

@@ -72,20 +72,20 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "vistas/sesiones.html",
             controller: "UserController"
         })
-        .state('app_usuario.home_usuario', {
-            url: "/home_usuario",
-            views: {
-                'menuContent' :{
-                    templateUrl: "vistas/home_usuario.html",
-                    controller: "UserController"
-                }
-            }
-        })
         .state('app_cliente.home_cliente', {
             url: "/home_cliente",
             views: {
                 'menuContent': {
                     templateUrl: "vistas/home_cliente.html",
+                    controller: "UserController"
+                }
+            }
+        })
+        .state('app_usuario.home_usuario', {
+            url: "/home_usuario",
+            views: {
+                'menuContent' :{
+                    templateUrl: "vistas/home_usuario.html",
                     controller: "UserController"
                 }
             }
@@ -96,6 +96,15 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                 'menuContent': {
                     templateUrl: 'vistas/mapa.html',
                     controller: 'MapaController'
+                }
+            }
+        })
+        .state('app_usuario.ferias', {
+            url: '/ferias',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/ferias.html',
+                    controller: 'UserController'
                 }
             }
         });
