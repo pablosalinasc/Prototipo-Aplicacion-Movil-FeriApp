@@ -27,6 +27,15 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "io.cordova.myapp23e015"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "io.cordova.myapp23e015"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "io.cordova.FeriApp"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "io.cordova.FeriApp"
         }
     },
     "dependent_plugins": {

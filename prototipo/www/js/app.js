@@ -72,6 +72,16 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "vistas/sesiones.html",
             controller: "UserController"
         })
+        .state('qr', {
+            url: "/qr",
+            templateUrl: "vistas/qr.html",
+            controller: "QRController"
+        })
+        .state('puesto', {
+            url: "/puesto",
+            templateUrl: "vistas/perfilPuesto.html",
+            controller: "QRController"
+        })
         .state('app_cliente.home_cliente', {
             url: "/home_cliente",
             views: {
