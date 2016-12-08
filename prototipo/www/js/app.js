@@ -107,6 +107,24 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'UserController'
                 }
             }
+        })
+        .state('app_usuario.mapaFeria', {
+            url: '/mapaFeria',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/mapaFeria.html',
+                    controller: 'MapaFeriaController'
+                }
+            }
+        })
+        .state('app_usuario.muroFeria', {
+            url: '/muroFeria',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/muroFeria.html',
+                    controller: 'MuroFeriaController'
+                }
+            }
         });
     $urlRouterProvider.otherwise('/');
 });

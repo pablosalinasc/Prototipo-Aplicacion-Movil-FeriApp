@@ -105,22 +105,22 @@ FeriApp.controller('UserController', function ($http, $scope, $state, $rootScope
     };
     $scope.registro_usuario = function () {
         //validación de campos
-        if($scope.datos_usuario.nombre_sesion!=""){
+        if ($scope.datos_usuario.nombre_sesion != "") {
             $scope.datos_usuario.id_sesion = ($rootScope.sesiones.length + 1) * 1000 + ($rootScope.sesiones.length + 1) * 100 + ($rootScope.sesiones.length + 1) * 10 + ($rootScope.sesiones.length + 1);
             $scope.datos_usuario.rol_sesion = "usuario";
             $rootScope.sesiones.push({ id_sesion: $scope.datos_usuario.id_sesion, nombre_sesion: $scope.datos_usuario.nombre_sesion, correo_sesion: $scope.datos_usuario.correo_sesion, password_sesion: $scope.datos_usuario.password_sesion, rol_sesion: $scope.datos_usuario.rol_sesion });
             console.log($rootScope.sesiones);
             $state.go('login');
-        }else{
-            $scope.campos_vacios_registro=true;
+        } else {
+            $scope.campos_vacios_registro = true;
         }
-    }
+    };
+    $scope.captura_index= function (indice) {
+        $rootScope.feria_index = indice;
+    };
 });
 
 FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope, $ionicSideMenuDelegate) {
-//    $scope.toggleLeft = function () {
-//        $ionicSideMenuDelegate.toggleLeft();
-//    };
     $scope.go = function (state) {
         $state.go(state);
     };
@@ -136,9 +136,9 @@ FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope,
         { id_sesion: 8888, nombre_sesion: "Cliente Tres", correo_sesion: "cliente3@usach.cl", password_sesion: "1234", rol_sesion: "cliente" }
     ];
     $rootScope.ferias = [
-        {id_feria: 1111, latitud_feria:-33.4906832 ,longitud_feria:-70.7667169 ,nombre_feria:"Modelo_3",comuna_feria:"Maipú",imagen_feria:"img/modelo3.jpg"},
+        {id_feria: 1111, latitud_feria:-33.4906832 ,longitud_feria:-70.7667169 ,nombre_feria:"Feria Modelo 3",comuna_feria:"Maipú",imagen_feria:"img/modelo3.jpg"},
         { id_feria: 2222, latitud_feria: -33.449877, longitud_feria: -70.687286, nombre_feria: "Feria Informática USACH", comuna_feria: "Estación Central", imagen_feria: "img/diinf.jpg" },
-        { id_feria: 3333, latitud_feria: -33.4703495, longitud_feria: -70.7481123, nombre_feria: "El descanso", comuna_feria: "Maipú", imagen_feria: "img/eldescanso.jpg" }
+        { id_feria: 3333, latitud_feria: -33.4703495, longitud_feria: -70.7481123, nombre_feria: "Feria El descanso", comuna_feria: "Maipú", imagen_feria: "img/eldescanso.jpg" }
     ];
     $rootScope.locales=[
         { id_local: 1234, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-1.jpg", latitud_local: -33.4903173, longitud_local: -70.7660641, descripcion_local: "Se vende Papas.", id_cliente_local: 1234, },
