@@ -33,7 +33,7 @@ FeriApp.controller('MapaController', function ($rootScope,$scope, $state, $cordo
                     animation: google.maps.Animation.DROP,
                     position: new google.maps.LatLng($rootScope.ferias[i].latitud_feria,$rootScope.ferias[i].longitud_feria)
                 });
-                $scope.strings[i] = "<div><a ui-sref='/mapaFeria' ng-click='captura_index(";
+                $scope.strings[i] = "<div><a ui-sref='app_usuario.mapaFeria' ng-click='captura_index(";
                 $scope.strings[i] = $scope.strings[i].concat(i);
                 $scope.strings[i] = $scope.strings[i].concat(")'>");
                 $scope.strings[i] = $scope.strings[i].concat($rootScope.ferias[i].nombre_feria);
@@ -56,7 +56,6 @@ FeriApp.controller('MapaController', function ($rootScope,$scope, $state, $cordo
     }, function (error) {
         console.log("No funcionó el mapa");
     });
-
 });
 
 FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, $stateParams, $cordovaGeolocation) {
@@ -67,10 +66,10 @@ FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, 
         var latLng = new google.maps.LatLng($rootScope.ferias[$rootScope.feria_index].latitud_feria, $rootScope.ferias[$rootScope.feria_index].longitud_feria);
         var mapOptions = {
             center: latLng,
-            zoom: 16,
+            zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        $scope.mapFeria = new google.maps.Map(document.getElementById("map2"), mapOptions);
+        $scope.mapFeria = new google.maps.Map(document.getElementById("map"), mapOptions);
         google.maps.event.addListenerOnce($scope.mapFeria, 'idle', function () {
             //var marcadorPosicion = new google.maps.Marker({
             //    map: $scope.mapFeria,
@@ -94,7 +93,7 @@ FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, 
                         animation: google.maps.Animation.DROP,
                         position: new google.maps.LatLng($rootScope.locales[i].latitud_local, $rootScope.locales[i].longitud_local)
                     });
-                    $scope.stringsLocales[i] = "<div><a ui-sref='/mapalocal' ng-click='captura_index(";
+                    $scope.stringsLocales[i] = "<div><a ui-sref='mapalocal' ng-click='captura_index(";
                     $scope.stringsLocales[i] = $scope.stringsLocales[i].concat(i);
                     $scope.stringsLocales[i] = $scope.stringsLocales[i].concat(")'>");
                     $scope.stringsLocales[i] = $scope.stringsLocales[i].concat($rootScope.locales[i].descripcion_local);
@@ -111,5 +110,13 @@ FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, 
 });
 
 FeriApp.controller('MuroFeriaController', function ($rootScope, $scope, $state, $stateParams, $cordovaGeolocation) {
-    $scope.variable = 0;
+    $scope.cantLocales = function () {
+        var cantLocales = 0;
+        for (var i in $rootScope.locales) {
+            if ($rootScope.ferias[$rootScope.feria_index].id_feria == $rootScope.locales[i].id_feria_local) {
+                cantLocales++;
+            }
+        }
+        return cantLocales;
+    };
 });

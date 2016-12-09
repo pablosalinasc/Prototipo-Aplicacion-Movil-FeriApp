@@ -149,8 +149,8 @@ FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope,
         { id_local: 6789, id_feria_local: 3333, codigo_qr_local: "/img/qrdescanso-1.jpg", latitud_feria: -33.4703495, longitud_feria: -70.7481123, descripcion_local: "Se vende melones y sandias", id_cliente_local: 3456 }
     ];
     $rootScope.productos = [
-        {id_producto:1111,nombre_producto:"Acelga",tipo_producto:"Hortaliza"},
-        {id_producto:2222,nombre_producto:"Achicoria",tipo_producto:"Hortaliza"},
+        { id_producto:1111,nombre_producto:"Acelga",tipo_producto:"Hortaliza"},
+        { id_producto:2222,nombre_producto:"Achicoria",tipo_producto:"Hortaliza"},
         { id_producto: 2222, nombre_producto: "Ajo", tipo_producto: "Hortaliza" },
         { id_producto: 2222, nombre_producto: "Ají", tipo_producto: "Hortaliza" },
         { id_producto: 2222, nombre_producto: "Albahaca", tipo_producto: "Hortaliza" },
