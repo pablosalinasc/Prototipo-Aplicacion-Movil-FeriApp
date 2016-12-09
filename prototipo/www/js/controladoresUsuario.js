@@ -112,4 +112,16 @@ FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, 
 
 FeriApp.controller('MuroFeriaController', function ($rootScope, $scope, $state, $stateParams, $cordovaGeolocation) {
     $scope.variable = 0;
+    $rootScope.feria_index = 0;
+    $scope.ratingFull = {};
+    $scope.ratingFull.rate = 3;
+    $scope.ratingFull.max = 5;
+
+    $scope.ratingHalf = {};
+    $scope.ratingHalf.rate = 3.5;
+    $scope.ratingHalf.max = 5;
+
+    $scope.reset = function () {
+        $scope.ratingFull.rate = 0;
+    }
 });
