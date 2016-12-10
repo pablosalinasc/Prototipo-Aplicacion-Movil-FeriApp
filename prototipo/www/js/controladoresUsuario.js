@@ -69,7 +69,7 @@ FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, 
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        $scope.mapFeria = new google.maps.Map(document.getElementById("map"), mapOptions);
+        $scope.mapFeria = new google.maps.Map(document.getElementById("map2"), mapOptions);
         google.maps.event.addListenerOnce($scope.mapFeria, 'idle', function () {
             //var marcadorPosicion = new google.maps.Marker({
             //    map: $scope.mapFeria,
