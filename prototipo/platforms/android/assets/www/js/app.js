@@ -134,6 +134,24 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'UserController'
                 }
             }
+        })
+        .state('app_usuario.cotizacion', {
+            url: '/cotizacion',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/cotizacion.html',
+                    controller: 'CotizacionController'
+                }
+            }
+        })
+        .state('app_usuario.resultado_cotizacion', {
+            url: '/resultado_cotizacion',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/resultado_cotizacion.html',
+                    controller: 'CotizacionController'
+                }
+            }
         });
     $urlRouterProvider.otherwise('/');
 });

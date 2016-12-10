@@ -173,6 +173,7 @@ FeriApp.controller('UserController', function ($http, $scope, $state, $rootScope
             }
         }
     };
+
 });
 
 FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope, $ionicSideMenuDelegate) {
@@ -198,8 +199,8 @@ FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope,
     $rootScope.locales=[
         { id_local: 1234, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-1.jpg", latitud_local: -33.4903173, longitud_local: -70.7660641,nombre_local:"Don Pancho", descripcion_local: "Se vende Papas.", id_cliente_local: 1234, },
         { id_local: 2345, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-2.jpg", latitud_local: -33.49022, longitud_local: -70.7660104,nombre_local:"Don manuel", descripcion_local: "Se vende Frutas.", id_cliente_local: 2345, },
-        { id_local: 3456, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-3.jpg", latitud_local: -33.4904012, longitud_local: -70.7662022, nombre_local: "Frutos secos de calidad", descripcion_local: "Se vende frutos secos.", id_cliente_local: 3456, },
-        { id_local: 4567, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-4.jpg", latitud_local: -33.4906832, longitud_local: -70.7667169,nombre_local:"El rey del mote", descripcion_local: "Se vende Mote.", id_cliente_local: 2345, },
+        { id_local: 3456, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-3.jpg", latitud_local: -33.4904012, longitud_local: -70.7662022, nombre_local: "Verduras", descripcion_local: "Se vende frutos secos.", id_cliente_local: 3456, },
+        { id_local: 4567, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-4.jpg", latitud_local: -33.4906832, longitud_local: -70.7667169,nombre_local:"Legumbres y verduras tiernas", descripcion_local: "Se vende Mote.", id_cliente_local: 2345, },
         { id_local: 5678, id_feria_local: 2222, codigo_qr_local: "/img/qrferiausach-1.jpg", latitud_local: -33.449877, longitud_local: -70.687286,nombre_local:"FeriApp", descripcion_local: "Stand del proyecto FeriApp, grupo del ramo de Proyecto de Ingeniería de Informática.", id_cliente_local: 2345 },
         { id_local: 6789, id_feria_local: 3333, codigo_qr_local: "/img/qrdescanso-1.jpg", latitud_feria: -33.4703495, longitud_feria: -70.7481123,nombre_local:"Los melones de María", descripcion_local: "Se vende melones y sandias", id_cliente_local: 3456 }
     ];
@@ -294,13 +295,41 @@ FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope,
         { id_producto: 1198, nombre_producto: "Uva", tipo_producto: "Fruta" },
     ];
     $rootScope.ofertas = [
-        { id_ofertas: 1111,id_local: 1234, id_producto_oferta: 1184, precio_oferta: "$1.000", medida_oferta: "kilogramo" },
-        { id_ofertas: 1111, id_local: 2345, id_producto_oferta: 1198, precio_oferta: "$1.500", medida_oferta: "kilogramo" },
-        { id_ofertas: 1111, id_local: 3456, id_producto_oferta: 1173, precio_oferta: "$1.000", medida_oferta: "cuarto de kilogramo" },
-        { id_ofertas: 1111, id_local: 4567, id_producto_oferta: 1170, precio_oferta: "$800", medida_oferta: "medio kilogramo" },
-        { id_ofertas: 1111, id_local: 5678, id_producto_oferta: 1154, precio_oferta: "$5.000", medida_oferta: "dos unidades" }
+        { id_ofertas: 1112,id_local: 1234, id_producto_oferta: 1184, precio_oferta: "$1.000", medida_oferta: "kilogramo" },
+        { id_ofertas: 1113, id_local: 2345, id_producto_oferta: 1198, precio_oferta: "$1.500", medida_oferta: "kilogramo" },
+        { id_ofertas: 1114, id_local: 3456, id_producto_oferta: 1173, precio_oferta: "$1.000", medida_oferta: "cuarto de kilogramo" },
+        { id_ofertas: 1115, id_local: 6789, id_producto_oferta: 1170, precio_oferta: "$800", medida_oferta: "medio kilogramo" },
+        { id_ofertas: 1116, id_local: 5678, id_producto_oferta: 1154, precio_oferta: "$5.000", medida_oferta: "dos unidades" }
     ]
+    $rootScope.precio_producto_local = [
+        { id_local: 1234, id_producto: 1142, precio_producto: 500, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        
+        { id_local: 2345, id_producto: 1182, precio_producto: 800, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 2345, id_producto: 1186, precio_producto: 800, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 2345, id_producto: 1193, precio_producto: 2200, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 2345, id_producto: 1128, precio_producto: 800, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 2345, id_producto: 1181, precio_producto: 1200, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 2345, id_producto: 1173, precio_producto: 2200, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 2345, id_producto: 1170, precio_producto: 700, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
 
+        { id_local: 3456, id_producto: 1134, precio_producto: 1200, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 3456, id_producto: 1156, precio_producto: 700, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 3456, id_producto: 1128, precio_producto: 600, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 3456, id_producto: 1131, precio_producto: 1100, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 3456, id_producto: 1125, precio_producto: 1200, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+
+        { id_local: 4567, id_producto: 1147, precio_producto: 1200, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 4567, id_producto: 1148, precio_producto: 1000, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 4567, id_producto: 1138, precio_producto: 1500, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+
+        { id_local: 5678, id_producto: 1186, precio_producto: 600, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" }, //repetido
+        { id_local: 5678, id_producto: 1191, precio_producto: 800, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 5678, id_producto: 1193, precio_producto: 1800, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" }, //repetido
+        { id_local: 5678, id_producto: 1194, precio_producto: 700, unidad_medida: "Kilogramo", fecha_precio: "2016-12-10T18:25:43-05:00" }, //repetido para cotizar
+        
+        { id_local: 6789, id_producto: 1140, precio_producto: 500, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" },
+        { id_local: 6789, id_producto: 1154, precio_producto: 3000, unidad_medida: "Unidad", fecha_precio: "2016-12-10T18:25:43-05:00" }
+    ];
 });
 
 FeriApp.controller('MenuController', function ($http, $scope, $state, $rootScope) {

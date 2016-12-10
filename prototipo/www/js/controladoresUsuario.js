@@ -120,3 +120,29 @@ FeriApp.controller('MuroFeriaController', function ($rootScope, $scope, $state, 
         return cantLocales;
     };
 });
+
+FeriApp.controller('CotizacionController', function ($rootScope, $scope, $state) {
+    $scope.capturar_indice_producto = function (indice) {
+        $rootScope.producto_index = indice;
+    };
+    $scope.busqueda_producto_precio = function (id_producto) {
+        $scope.resultado_busqueda = [];
+        for (var i in $rootScope.precio_producto_local) {
+            if ($rootScope.precio_producto_local[i].id_producto == id_producto) {
+                $scope.resultado_busqueda.push($rootScope.precio_producto_local[i]);
+            }
+        }
+        console.log($scope.resultado_busqueda);
+        return $scope.resultado_busqueda;
+    }
+    $scope.buscar_local = function (id_local) {
+        var local = {};
+        for (var i in $rootScope.locales) {
+            if ($rootScope.locales[i].id_local == id_local) {
+                local = $rootScope.locales[i];
+                return local;
+                break;
+            }
+        }
+    };
+});
