@@ -125,6 +125,15 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'MuroFeriaController'
                 }
             }
+        })
+        .state('app_usuario.oferta', {
+            url: '/oferta',
+            views: {
+                'menuContent': {
+                    templateUrl: 'vistas/oferta.html',
+                    controller: 'UserController'
+                }
+            }
         });
     $urlRouterProvider.otherwise('/');
 });
