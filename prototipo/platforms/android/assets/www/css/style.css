@@ -27,3 +27,10 @@
     width: 100%;
     height: 100%;
 }
+.rating-block {
+  display: inline-block;
+}
+.rating-block ~ .button {
+  line-height:30px;
+  min-height:0;
+}
