@@ -18,6 +18,9 @@
                     <p>Fecha de ingreso: {{local.fecha_precio|date:"dd/MM/yyyy 'a las' h:mma"}}</p>
                 </div>
             </div>
+            <div class="item item-text-wrap" ng-show="!busqueda_producto_precio(productos[producto_index].id_producto).length">
+                Actualmente no hay locales vendiendo este producto
+            </div>
         </div>
     </ion-content>
 </ion-view>

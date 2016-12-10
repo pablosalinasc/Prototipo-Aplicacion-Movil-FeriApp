@@ -199,10 +199,10 @@ FeriApp.controller('AppController', function ($http, $scope, $state, $rootScope,
     $rootScope.locales=[
         { id_local: 1234, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-1.jpg", latitud_local: -33.4903173, longitud_local: -70.7660641,nombre_local:"Don Pancho", descripcion_local: "Se vende Papas.", id_cliente_local: 1234, },
         { id_local: 2345, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-2.jpg", latitud_local: -33.49022, longitud_local: -70.7660104,nombre_local:"Don manuel", descripcion_local: "Se vende Frutas.", id_cliente_local: 2345, },
-        { id_local: 3456, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-3.jpg", latitud_local: -33.4904012, longitud_local: -70.7662022, nombre_local: "Verduras", descripcion_local: "Se vende frutos secos.", id_cliente_local: 3456, },
+        { id_local: 3456, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-3.jpg", latitud_local: -33.4904012, longitud_local: -70.7662022, nombre_local: "Verduras varias", descripcion_local: "Se vende frutos secos.", id_cliente_local: 3456, },
         { id_local: 4567, id_feria_local: 1111, codigo_qr_local: "/img/qrmodelo3-4.jpg", latitud_local: -33.4906832, longitud_local: -70.7667169,nombre_local:"Legumbres y verduras tiernas", descripcion_local: "Se vende Mote.", id_cliente_local: 2345, },
         { id_local: 5678, id_feria_local: 2222, codigo_qr_local: "/img/qrferiausach-1.jpg", latitud_local: -33.449877, longitud_local: -70.687286,nombre_local:"FeriApp", descripcion_local: "Stand del proyecto FeriApp, grupo del ramo de Proyecto de Ingeniería de Informática.", id_cliente_local: 2345 },
-        { id_local: 6789, id_feria_local: 3333, codigo_qr_local: "/img/qrdescanso-1.jpg", latitud_feria: -33.4703495, longitud_feria: -70.7481123,nombre_local:"Los melones de María", descripcion_local: "Se vende melones y sandias", id_cliente_local: 3456 }
+        { id_local: 6789, id_feria_local: 3333, codigo_qr_local: "/img/qrdescanso-1.jpg", latitud_local: -33.4703495, longitud_local: -70.7481123, nombre_local: "Los melones de María", descripcion_local: "Se vende melones y sandias", id_cliente_local: 3456 }
     ];
     $rootScope.productos = [
         { id_producto: 1111, nombre_producto: "Acelga", tipo_producto: "Hortaliza", imagen_producto: "img/logoFeriApp.png" },
