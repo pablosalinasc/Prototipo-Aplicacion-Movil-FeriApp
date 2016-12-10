@@ -125,7 +125,16 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'MuroFeriaController'
                 }
             }
-        });
-    $urlRouterProvider.otherwise('/');
+        })
+        .state('app_usuario.muroPuesto', {
+                url: '/muroPuesto',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'vistas/muroPuesto.html',
+                        controller: 'MuroPuestoController'
+                    }
+                }
+            });
+        $urlRouterProvider.otherwise('/');
 });
 
