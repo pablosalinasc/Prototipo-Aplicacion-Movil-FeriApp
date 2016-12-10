@@ -4,9 +4,12 @@
     </ion-nav-buttons>
     <ion-content class="padding">
         <div class="card">
+            <div class="item item-text-wrap">
+                <img src="{{productos[producto_index].imagen_producto}}" style="max-width: 99%">
+            </div>
             <div class="item item-divider">
                 <h1>{{productos[producto_index].nombre_producto}}</h1>
-                <p>{{productos[producto_index].tipo_producto}}</p>
+                <h2>{{productos[producto_index].tipo_producto}}</h2>
             </div>
             <div ng-repeat="local in busqueda_producto_precio(productos[producto_index].id_producto)">
                 <div class="item">

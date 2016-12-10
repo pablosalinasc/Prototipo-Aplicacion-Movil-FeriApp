@@ -132,7 +132,6 @@ FeriApp.controller('CotizacionController', function ($rootScope, $scope, $state)
                 $scope.resultado_busqueda.push($rootScope.precio_producto_local[i]);
             }
         }
-        console.log($scope.resultado_busqueda);
         return $scope.resultado_busqueda;
     }
     $scope.buscar_local = function (id_local) {

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget defaultLocale="es-ES" id="io.cordova.myapp23e015" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget defaultLocale="es-ES" id="io.cordova.FeriApp" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
@@ -41,9 +41,9 @@
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-    <name>prototipo</name>
-    <description>An Ionic Framework and Cordova project for Visual Studio</description>
-    <author email="vscordovatools@microsoft.com" href="http://taco.visualstudio.com">Visual Studio JS Mobile Tooling</author>
+    <name>FeriApp</name>
+    <description>Prototipo plataforma FeriApp</description>
+    <author email="vscordovatools@microsoft.com" href="http://taco.visualstudio.com">Pablo Salinas, Sebastian Calderon, Veronica Dominguez, Daniel Morales y Rodrigo Mendoza</author>
     <content src="index.html" />
     <access origin="*" />
     <preference name="webviewbounce" value="false" />
